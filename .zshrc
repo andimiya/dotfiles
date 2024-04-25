@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias psqlstop="brew services stop postgresql"
 alias start="bin/server"
 alias medic="gh medic"
+alias seed="./bin/seed sponsors"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
