@@ -103,7 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias psqlstart="brew services start postgresql"
 # alias psqlstop="brew services stop postgresql"
-# alias npmd="npm run dev"
+alias npmd="npm run dev"
+alias weather='curl wttr.in/emeryville'
+
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
