@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias psqlstart="brew services start postgresql"
 # alias psqlstop="brew services stop postgresql"
-alias start="bin/server"
+alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
 alias debug="DEPENDENCY_GRAPH_API_URL="" script/server --debug"
