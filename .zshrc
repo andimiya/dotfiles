@@ -107,6 +107,7 @@ alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
 alias debug="DEPENDENCY_GRAPH_API_URL="" script/server --debug"
+alias enterprise="bin/setup --enterprise"
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
