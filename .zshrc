@@ -108,7 +108,10 @@ alias medic="gh medic"
 alias seed="./bin/seed sponsors"
 alias debug="DEPENDENCY_GRAPH_API_URL="" script/server --debug"
 alias enterprise="bin/setup --enterprise"
-alias octo="OCTOCAPTCHA_ENABLED=true"
+alias octovar="OCTOCAPTCHA_ENABLED=true"
+alias octoff="bin/toggle-feature-flag enable octocaptcha_more_data_exchange -F octocaptcha -F octocaptcha_client_api_v2 -F octocaptcha_signup_redesign_client_api_v2 -F octocaptcha_signup_redesign_more_data_exchange_enabled -F octocaptcha_arkose_V4_api_migration -F octocaptcha_signup_redesign -F octocaptcha"
+alias octo="octoff && octovar"
+
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
