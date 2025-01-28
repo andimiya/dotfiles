@@ -135,3 +135,7 @@ alias octo="octoff && octovar"
 #     nvm use default
 #   fi
 # }
+
+# shouldnt need to set --set-upstream <branch> each time
+git config --global push.autoSetupRemote true
+
