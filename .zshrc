@@ -103,12 +103,18 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias psqlstart="brew services start postgresql"
 # alias psqlstop="brew services stop postgresql"
-alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
+# alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
+
+export ARKOSE_PRIVATE_KEY=$(cat ~/.arkose-private_key)
+
+alias start="bin/server"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
-alias debug="DEPENDENCY_GRAPH_API_URL="" script/server --debug"
+alias debug="script/server --debug"
 alias enterprise="bin/setup --enterprise"
-alias octovar="OCTOCAPTCHA_ENABLED=true"
+alias octovar="OCTOCAPTCHA_ENABLED=true \
+FUNCAPTCHA_PUBLIC_KEY_2_VERSION_2="B3D4A756-7E9A-4840-8FDD-CED4EB185C29" \
+FUNCAPTCHA_PRIVATE_KEY_2_VERSION_2=$ARKOSE_PRIVATE_KEY"
 alias octoff="bin/toggle-feature-flag enable octocaptcha_more_data_exchange -F octocaptcha -F octocaptcha_client_api_v2 -F octocaptcha_signup_redesign_client_api_v2 -F octocaptcha_signup_redesign_more_data_exchange_enabled -F octocaptcha_arkose_V4_api_migration -F octocaptcha_signup_redesign -F octocaptcha"
 alias octo="octoff && octovar"
 
