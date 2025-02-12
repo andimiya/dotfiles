@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 
 
-export FUNCAPTCHA_PUBLIC_KEY_2_VERSION_2=$(< ~/.FUNCAPTCHA_PUBLIC_KEY_2_VERSION_2)
-export FUNCAPTCHA_PRIVATE_KEY_2_VERSION_2=$(< ~/.FUNCAPTCHA_PRIVATE_KEY_2_VERSION_2)
+export FUNCAPTCHA_PUBLIC_KEY_2_VERSION_2=$(< /home/vscode/dotfiles/.FUNCAPTCHA_PUBLIC_KEY_2_VERSION_2)
+export FUNCAPTCHA_PRIVATE_KEY_2_VERSION_2=$(< /home/vscode/dotfiles/.FUNCAPTCHA_PRIVATE_KEY_2_VERSION_2)
 
 alias start="bin/server"
 alias medic="gh medic"
