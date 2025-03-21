@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias psqlstop="brew services stop postgresql"
 # alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 
+alias gc="git commit -m -s"
 alias start="bin/server"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
@@ -113,6 +114,12 @@ alias enterprise="bin/setup --enterprise"
 alias octovar="OCTOCAPTCHA_ENABLED=true"
 alias octoff="bin/toggle-feature-flag enable -F octocaptcha -F octocaptcha_signup_redesign_more_data_exchange_enabled"
 alias octo="octoff && octovar"
+alias codedelete="gh cs delete --all && ./create-github-codespace"
+alias jm='echo 'Co-authored-by: jmeridth <jmeridth@github.com>' | pbcopy'
+alias francisfuzz='echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | pbcopy'
+alias hkly='echo 'Co-authored-by: hkly <hkly@github.com>' | pbcopy'
+alias sutterj='echo 'Co-authored-by: sutterj <sutterj@github.com>' | pbcopy'
+alias catsintents='echo 'Co-authored-by: catsintents <catsintents@github.com>' | pbcopy'
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
