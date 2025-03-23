@@ -115,11 +115,21 @@ alias octovar="OCTOCAPTCHA_ENABLED=true"
 alias octoff="bin/toggle-feature-flag enable -F octocaptcha -F octocaptcha_signup_redesign_more_data_exchange_enabled"
 alias octo="octoff && octovar"
 alias codedelete="gh cs delete --all && ./create-github-codespace"
-alias jm="echo 'Co-authored-by: jmeridth <jmeridth@github.com>' | pbcopy"
-alias francisfuzz="echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | pbcopy"
-alias hkly="echo 'Co-authored-by: hkly <hkly@github.com>' | pbcopy"
-alias sutterj="echo 'Co-authored-by: sutterj <sutterj@github.com>' | pbcopy"
-alias catsintents="echo 'Co-authored-by: catsintents <catsintents@github.com>' | pbcopy"
+
+# Detect if running in Codespaces
+if [[ -n "$CODESPACES" ]]; then
+  alias jm="echo 'Co-authored-by: jmeridth <jmeridth@github.com>' | xclip -selection clipboard"
+  alias francisfuzz="echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | xclip -selection clipboard"
+  alias hkly="echo 'Co-authored-by: hkly <hkly@github.com>' | xclip -selection clipboard"
+  alias sutterj="echo 'Co-authored-by: sutterj <sutterj@github.com>' | xclip -selection clipboard"
+  alias catsintents="echo 'Co-authored-by: catsintents <catsintents@github.com>' | xclip -selection clipboard"
+else
+  alias jm="echo 'Co-authored-by: jmeridth <jmeridth@github.com>' | pbcopy"
+  alias francisfuzz="echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | pbcopy"
+  alias hkly="echo 'Co-authored-by: hkly <hkly@github.com>' | pbcopy"
+  alias sutterj="echo 'Co-authored-by: sutterj <sutterj@github.com>' | pbcopy"
+  alias catsintents="echo 'Co-authored-by: catsintents <catsintents@github.com>' | pbcopy"
+fi
 
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
