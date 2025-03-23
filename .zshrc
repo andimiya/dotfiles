@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias psqlstop="brew services stop postgresql"
 # alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 
-alias gc="git commit -S -m"
+alias gc="git commit -S"
 alias start="bin/server"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
