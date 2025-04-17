@@ -114,7 +114,7 @@ alias enterprise="bin/setup --enterprise"
 alias octovar="OCTOCAPTCHA_ENABLED=true"
 alias octoff="bin/toggle-feature-flag enable -F octocaptcha -F octocaptcha_signup_redesign_more_data_exchange_enabled"
 alias octo="octoff && octovar"
-alias codedelete="gh cs delete --all && ./create-github-codespace"
+alias codedelete="gh cs delete --all
 
 # Detect if running in Codespaces
 if [[ -n "$CODESPACES" ]]; then
