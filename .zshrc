@@ -107,9 +107,10 @@ source $ZSH/oh-my-zsh.sh
 
 alias gc="git commit -S"
 alias start="bin/server"
+alias startui="bin/server --ui"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
-alias debug="script/server --debug"
+alias debug="script/server --debug --ui"
 alias enterprise="bin/setup --enterprise"
 alias octovar="OCTOCAPTCHA_ENABLED=true"
 alias octoff="bin/toggle-feature-flag enable -F octocaptcha -F octocaptcha_signup_redesign_more_data_exchange_enabled"
