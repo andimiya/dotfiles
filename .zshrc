@@ -106,9 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # alias start="DEPENDENCY_GRAPH_API_URL="" bin/server"
 
 alias gc="git commit -S"
-alias startbackend="script/server --ui --vite"
-alias startui="bin/server --ui"
-alias start="bin/server"
+alias startfast="script/server --ui --vite"
+alias start="bin/server --ui"
 alias medic="gh medic"
 alias seed="./bin/seed sponsors"
 alias debug="script/server --debug --ui"
