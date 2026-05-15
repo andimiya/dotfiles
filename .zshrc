@@ -117,6 +117,8 @@ alias octoff="bin/toggle-feature-flag enable -F octocaptcha -F octocaptcha_signu
 alias octo="octoff && octovar"
 alias codedelete="gh cs delete --all"
 alias seedpulls="script/setup-pulls-dashboard"
+alias dslint="nx run @github-ui/dashboard-surface:lint"
+alias dstest="nx run @github-ui/dashboard-surface:test"
 
 # Detect if running in Codespaces
 if [[ -n "$CODESPACES" ]]; then
@@ -124,13 +126,11 @@ if [[ -n "$CODESPACES" ]]; then
   alias francisfuzz="echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | xclip -selection clipboard"
   alias hkly="echo 'Co-authored-by: hkly <hkly@github.com>' | xclip -selection clipboard"
   alias sutterj="echo 'Co-authored-by: sutterj <sutterj@github.com>' | xclip -selection clipboard"
-  alias catsintents="echo 'Co-authored-by: catsintents <catsintents@github.com>' | xclip -selection clipboard"
 else
   alias jm="echo 'Co-authored-by: jmeridth <jmeridth@github.com>' | pbcopy"
   alias francisfuzz="echo 'Co-authored-by: francisfuzz <francisfuzz@github.com>' | pbcopy"
   alias hkly="echo 'Co-authored-by: hkly <hkly@github.com>' | pbcopy"
   alias sutterj="echo 'Co-authored-by: sutterj <sutterj@github.com>' | pbcopy"
-  alias catsintents="echo 'Co-authored-by: catsintents <catsintents@github.com>' | pbcopy"
 fi
 
 if [ -r ~/.zshrc ]; then echo -e '\nexport GPG_TTY=$(tty)' >> ~/.zshrc; \
