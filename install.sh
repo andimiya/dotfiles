@@ -45,4 +45,6 @@ if [ -f "$DOTFILES_DIR/.github/copilot-instructions.md" ]; then
   echo "✓ Linked copilot-instructions.md → ~/.copilot/copilot-instructions.md"
 fi
 
+git config --global push.autoSetupRemote true
+
 echo "Dotfiles install complete."
